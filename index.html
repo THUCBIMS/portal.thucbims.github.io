@@ -7,42 +7,150 @@
 </head>
 <body class="bg-white text-gray-800">
 
-  <!-- Header -->
-  <header class="bg-gray-100 shadow">
-    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-gray-900">CBIMS research group</h1>
-      <nav class="space-x-6">
-        <a href="#about" class="text-gray-700 hover:text-blue-600">About</a>
-        <a href="#news" class="text-gray-700 hover:text-blue-600">News</a>
-        <a href="#awards" class="text-gray-700 hover:text-blue-600">Awards</a>
-        <a href="#publications" class="text-gray-700 hover:text-blue-600">Publications</a>
-      </nav>
-    </div>
-  </header>
+  <!-- Hero Section with Header and About -->
+  <section id="about" class="relative bg-cover bg-center bg-no-repeat" style="background-image: url('images/home-heroimage.jpg');">
+    <!-- Overlay for better text readability -->
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    
+    <!-- Header -->
+    <header class="relative z-10">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 id="siteTitle" class="text-2xl font-bold text-white">CBIMS研究组</h1>
+        <nav class="space-x-6 flex items-center">
+          <a href="#about" id="nav-about" class="text-white hover:text-blue-300">关于我们</a>
+          <a href="#news" id="nav-news" class="text-white hover:text-blue-300">新闻</a>
+          <a href="#awards" id="nav-awards" class="text-white hover:text-blue-300">获奖</a>
+          <a href="#publications" id="nav-publications" class="text-white hover:text-blue-300">论文发表</a>
+          
+          <!-- Language Dropdown -->
+          <div class="relative">
+            <button id="languageBtn" class="text-white hover:text-blue-300 flex items-center space-x-1">
+              <span id="languageText">语言</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div id="languageDropdown" class="absolute right-0 mt-2 w-24 bg-white rounded-md shadow-lg hidden" style="z-index: 9999;">
+              <div class="py-1">
+                <button class="language-option block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="zh">中文</button>
+                <button class="language-option block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="en">English</button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-  <!-- About -->
-  <section id="about" class="max-w-5xl mx-auto px-6 py-12">
-    <h2 class="text-2xl font-bold mb-4">About Us&#127757;</h2>
-    <p class="text-gray-700 leading-relaxed">
-      We are the CBIMS research group from School of software, Tsinghua University. Our research focuses on Building Information Model (BIM), 3D computer vision, 
-      and Artificial Intelligence (AI). We aim to bridge the gap between Architecture, Engineering & Construction (AEC) industry and AI. 
-    </p>
+    <!-- About Us -->
+    <div class="relative z-10 max-w-5xl mx-auto px-6 py-12 pb-20">
+      <h2 id="aboutTitle" class="text-3xl font-bold mb-6 text-white">关于我们&#127757;</h2>
+      <p id="aboutText" class="text-lg text-white leading-relaxed max-w-3xl">
+        我们是清华大学软件学院CBIMS研究组。我们的研究专注于建筑信息模型（BIM）、3D计算机视觉和人工智能（AI）。我们致力于连接建筑、工程和建设（AEC）行业与人工智能之间的桥梁。
+      </p>
+    </div>
   </section>
 
   <!-- News -->
-  <section id="news" class="max-w-5xl mx-auto px-6 py-12 bg-gray-50 rounded-xl">
-    <h2 class="text-2xl font-bold mb-4">News&#10024;</h2>
-    <ul class="list-disc pl-5 space-y-2 text-gray-700">
-      <li><span class="font-semibold">Aug 2025:</span> Our paper "I-Filtering" accepted by TPAMI 🎉</li>
-      <li><span class="font-semibold">Mar 2025:</span> Our paper "BIMFusion" accepted by JCCE 🥳</li>
-      <li><span class="font-semibold">Mar 2025:</span> Our paper "BIMNet" accepted by Automation in Construction 👏</li>
-      <li><span class="font-semibold">Feb 2025:</span> Our paper "FatesGS" and "Sparis" accepted by AAAI 2025 🎊</li>
+  <section id="news" class="py-16" style="background-color: #eef9ff;">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 id="newsTitle" class="text-2xl font-bold mb-8">新闻&#10024;</h2>
       
-    </ul>
+      <!-- Scrollable Container -->
+      <div class="relative">
+        <!-- Left Arrow Button -->
+        <button id="leftBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-50 transition-colors">
+          <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        
+        <!-- Right Arrow Button -->
+        <button id="rightBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-50 transition-colors">
+          <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+        
+        <!-- Cards Container -->
+        <div class="overflow-hidden mx-12">
+          <div id="cardsContainer" class="flex space-x-6 transition-transform duration-300">
+            
+            <!-- Card 1 -->
+            <div class="flex-shrink-0 w-72 bg-white rounded-2xl overflow-hidden">
+              <div class="h-48">
+                <img src="images/news1.jpg" alt="News 1" class="w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <div class="flex space-x-2 mb-3">
+                  <span class="px-3 py-1 text-gray-700 text-sm rounded-full" style="background-color: #eef9ff;">08.2025</span>
+                  <span class="px-3 py-1 text-gray-700 text-sm rounded-full" style="background-color: #eef9ff;">论文录用</span>
+                </div>
+                <div class="space-y-1">
+                  <p class="text-sm text-gray-700">会议：TPAMI</p>
+                  <p class="text-sm text-gray-700">论文：I-Filtering: Implicit Filtering for Learning Neural Distance Functions from 3D Point Clouds</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="flex-shrink-0 w-72 bg-white rounded-2xl overflow-hidden">
+              <div class="h-48">
+                <img src="images/news2.jpg" alt="News 2" class="w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <div class="flex space-x-2 mb-3">
+                  <span class="px-3 py-1 text-gray-700 text-sm rounded-full" style="background-color: #eef9ff;">03.2025</span>
+                  <span class="px-3 py-1 text-gray-700 text-sm rounded-full" style="background-color: #eef9ff;">论文录用</span>
+                </div>
+                <div class="space-y-1">
+                  <p class="text-sm text-gray-700">刊物：JCCE</p>
+                  <p class="text-sm text-gray-700">论文：BIMFusion: Texturing Building Information Models Using Diffusion Generative Methods</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="flex-shrink-0 w-72 bg-white rounded-2xl overflow-hidden">
+              <div class="h-48">
+                <img src="images/news3.jpg" alt="News 3" class="w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <div class="flex space-x-2 mb-3">
+                  <span class="px-3 py-1 text-gray-700 text-sm rounded-full" style="background-color: #eef9ff;">03.2025</span>
+                  <span class="px-3 py-1 text-gray-700 text-sm rounded-full" style="background-color: #eef9ff;">论文录用</span>
+                </div>
+                <div class="space-y-1">
+                  <p class="text-sm text-gray-700">刊物：Automation in Construction</p>
+                  <p class="text-sm text-gray-700">论文：BIMNet: Dataset and benchmark for as-built BIM reconstruction from real-world point cloud</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="flex-shrink-0 w-72 bg-white rounded-2xl overflow-hidden">
+              <div class="h-48">
+                <img src="images/news4.jpg" alt="News 4" class="w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <div class="flex space-x-2 mb-3">
+                  <span class="px-3 py-1 text-gray-700 text-sm rounded-full" style="background-color: #eef9ff;">02.2025</span>
+                  <span class="px-3 py-1 text-gray-700 text-sm rounded-full" style="background-color: #eef9ff;">论文录用</span>
+                </div>
+                <div class="space-y-1">
+                  <p class="text-sm text-gray-700">会议：AAAI</p>
+                  <p class="text-sm text-gray-700">论文：FatesGS: Fast and Accurate Sparse-View Surface Reconstruction using Gaussian Splatting with Depth-Feature Consistency</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-    <section id="awards" class="max-w-5xl mx-auto px-6 py-12">
-    <h2 class="text-2xl font-bold mb-6">Awards&#127942;</h2>
+  <section id="awards" class="max-w-5xl mx-auto px-6 py-12">
+    <h2 id="awardsTitle" class="text-2xl font-bold mb-6">获奖&#127942;</h2>
 
         <!-- Award card 2023 -->
         <div class="grid md:grid-cols-[150px_1fr] gap-4 p-4 rounded-2xl border mb-3">
@@ -50,7 +158,7 @@
         <img src="images/23-2d-1.png" alt="CVPR 2023 Award">
         <div>
             <h3 class="font-semibold">
-            First Place&#129351; — Scan-to-BIM Challenge (2D Floorplan Reconstruction)
+            First Place&#129351; -- Scan-to-BIM Challenge (2D Floorplan Reconstruction)
             </h3>
             <p class="text-m text-gray-700">
             Held in conjunction with <span class="font-medium"><b>CVPR 2023</b></span>, Vancouver, Canada.
@@ -67,7 +175,7 @@
         <img src="images/23-3d-2.png" alt="CVPR 2023 Award">
         <div>
             <h3 class="font-semibold">
-            Second Place&#129352; — Scan-to-BIM Challenge (3D Building Model Reconstruction)
+            Second Place&#129352; -- Scan-to-BIM Challenge (3D Building Model Reconstruction)
             </h3>
             <p class="text-m text-gray-700">
             Held in conjunction with <span class="font-medium"><b>CVPR 2023</b></span>, Vancouver, Canada.
@@ -84,7 +192,7 @@
         <img src="images/22-2d-1.png" alt="CVPR 2022 Award" >
         <div>
             <h3 class="font-semibold">
-            First Place&#129351; — Scan-to-BIM Challenge (2D Floorplan Reconstruction)
+            First Place&#129351; -- Scan-to-BIM Challenge (2D Floorplan Reconstruction)
             </h3>
             <p class="text-m text-gray-700">
             Held in conjunction with <span class="font-medium"><b>CVPR 2022</b></span>, New Orleans, USA.
@@ -101,7 +209,7 @@
         <img src="images/22-3d-1.png" alt="CVPR 2022 Award" >
         <div>
             <h3 class="font-semibold">
-            First Place&#129351; — Scan-to-BIM Challenge (3D Floorplan Reconstruction)
+            First Place&#129351; -- Scan-to-BIM Challenge (3D Floorplan Reconstruction)
             </h3>
             <p class="text-m text-gray-700">
             Held in conjunction with <span class="font-medium"><b>CVPR 2022</b></span>, New Orleans, USA.
@@ -117,7 +225,7 @@
 
   <!-- Publications -->
   <section id="publications" class="max-w-5xl mx-auto px-6">
-    <h2 class="text-2xl font-bold mb-6">Publications&#128196;</h2>
+    <h2 id="publicationsTitle" class="text-2xl font-bold mb-6">论文发表&#128196;</h2>
 
     <!-- Year -->
     <h3 class="text-xl font-semibold mb-4">2025</h3>
@@ -286,6 +394,119 @@
       © 2025 CBIMS research group · School of software, Tsinghua University · Contact: cbimsmanager@tsinghua.edu.cn
     </div>
   </footer>
+
+  <script>
+    // Language switching functionality
+    const translations = {
+      zh: {
+        siteTitle: "CBIMS研究组",
+        navAbout: "关于我们",
+        navNews: "新闻",
+        navAwards: "获奖",
+        navPublications: "论文发表",
+        languageText: "语言",
+        aboutTitle: "关于我们🌍",
+        aboutText: "我们是清华大学软件学院CBIMS研究组。我们的研究专注于建筑信息模型（BIM）、3D计算机视觉和人工智能（AI）。我们致力于连接建筑、工程和建设（AEC）行业与人工智能之间的桥梁。",
+        newsTitle: "新闻✨",
+        awardsTitle: "获奖🏆",
+        publicationsTitle: "论文发表📄"
+      },
+      en: {
+        siteTitle: "CBIMS research group",
+        navAbout: "About",
+        navNews: "News",
+        navAwards: "Awards",
+        navPublications: "Publications",
+        languageText: "Language",
+        aboutTitle: "About Us🌍",
+        aboutText: "We are the CBIMS research group from School of software, Tsinghua University. Our research focuses on Building Information Model (BIM), 3D computer vision, and Artificial Intelligence (AI). We aim to bridge the gap between Architecture, Engineering & Construction (AEC) industry and AI.",
+        newsTitle: "News✨",
+        awardsTitle: "Awards🏆",
+        publicationsTitle: "Publications📄"
+      }
+    };
+
+    let currentLang = 'zh';
+
+    function updateLanguage(lang) {
+      currentLang = lang;
+      const t = translations[lang];
+      
+      document.getElementById('siteTitle').textContent = t.siteTitle;
+      document.getElementById('nav-about').textContent = t.navAbout;
+      document.getElementById('nav-news').textContent = t.navNews;
+      document.getElementById('nav-awards').textContent = t.navAwards;
+      document.getElementById('nav-publications').textContent = t.navPublications;
+      document.getElementById('languageText').textContent = t.languageText;
+      document.getElementById('aboutTitle').textContent = t.aboutTitle;
+      document.getElementById('aboutText').textContent = t.aboutText;
+      document.getElementById('newsTitle').textContent = t.newsTitle;
+      document.getElementById('awardsTitle').textContent = t.awardsTitle;
+      document.getElementById('publicationsTitle').textContent = t.publicationsTitle;
+    }
+
+    // Language dropdown functionality
+    const languageBtn = document.getElementById('languageBtn');
+    const languageDropdown = document.getElementById('languageDropdown');
+    const languageOptions = document.querySelectorAll('.language-option');
+
+    languageBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      languageDropdown.classList.toggle('hidden');
+    });
+
+    languageOptions.forEach(option => {
+      option.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const lang = option.getAttribute('data-lang');
+        updateLanguage(lang);
+        languageDropdown.classList.add('hidden');
+      });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
+        languageDropdown.classList.add('hidden');
+      }
+    });
+
+    // Initialize with Chinese
+    updateLanguage('zh');
+
+    // News carousel functionality
+    const cardsContainer = document.getElementById('cardsContainer');
+    const leftBtn = document.getElementById('leftBtn');
+    const rightBtn = document.getElementById('rightBtn');
+    
+    let scrollPosition = 0;
+    const cardWidth = 288 + 24; // 72 * 4 (w-72) + 24px gap
+    const maxScroll = cardWidth * 1; // Can scroll 1 card width (since we show 3 out of 4)
+    
+    function updateButtons() {
+      leftBtn.style.display = scrollPosition <= 0 ? 'none' : 'flex';
+      rightBtn.style.display = scrollPosition >= maxScroll ? 'none' : 'flex';
+    }
+    
+    function scrollCards(direction) {
+      if (direction === 'left' && scrollPosition > 0) {
+        scrollPosition -= cardWidth;
+      } else if (direction === 'right' && scrollPosition < maxScroll) {
+        scrollPosition += cardWidth;
+      }
+      
+      cardsContainer.style.transform = `translateX(-${scrollPosition}px)`;
+      updateButtons();
+    }
+    
+    leftBtn.addEventListener('click', () => scrollCards('left'));
+    rightBtn.addEventListener('click', () => scrollCards('right'));
+    
+    // Initialize button visibility
+    updateButtons();
+  </script>
 
 </body>
 </html>
