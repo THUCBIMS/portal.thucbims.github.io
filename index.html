@@ -142,7 +142,24 @@
                 </div>
               </div>
             </div>
-            
+
+            <!-- Card 5 -->
+            <div class="flex-shrink-0 w-72 bg-white rounded-2xl overflow-hidden">
+              <div class="h-48">
+                <img src="images/news5.jpg" alt="News 5" class="w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <div class="flex space-x-2 mb-3">
+                  <span class="px-3 py-1 text-gray-700 text-sm rounded-full" style="background-color: #eef9ff;">02.2025</span>
+                  <span class="px-3 py-1 text-gray-700 text-sm rounded-full" style="background-color: #eef9ff;">论文录用</span>
+                </div>
+                <div class="space-y-1">
+                  <p class="text-sm text-gray-700">会议：AAAI</p>
+                  <p class="text-sm text-gray-700">论文：Sparis: Neural Implicit Surface Reconstruction of Indoor Scenes from Sparse Views</p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -242,9 +259,9 @@
           </p>
           <p class="text-m text-gray-600">IEEE Transactions on Pattern Analysis and Machine Intelligence (<b>TPAMI</b>), 2025 </p>
           <div class="space-x-3 text-m mt-1">
-            <a href="#" class="text-blue-600 hover:underline">Project page</a>
-            <a href="#" class="text-blue-600 hover:underline">Paper</a>
-            <a href="#" class="text-blue-600 hover:underline">Github</a>
+            <a href="https://list17.github.io/ImplicitFilter" class="text-blue-600 hover:underline">Project page</a>
+            <a href="https://www.computer.org/csdl/journal/tp/5555/01/11141752/29uDQAKyJLq" class="text-blue-600 hover:underline">Paper</a>
+            <a href="https://github.com/list17/ImplicitFiltering" class="text-blue-600 hover:underline">Github</a>
           </div>
         </div>
       </div>
@@ -260,9 +277,9 @@
           </p>
           <p class="text-m text-gray-600">Automation in Construction (<b>AUTCON</b>), 2025 </p>
           <div class="space-x-3 text-m mt-1">
-            <a href="#" class="text-blue-600 hover:underline">Project page</a>
-            <a href="#" class="text-blue-600 hover:underline">Paper</a>
-            <a href="#" class="text-blue-600 hover:underline">Github</a>
+            <a href="https://thucbims.github.io/bimnet/" class="text-blue-600 hover:underline">Project page</a>
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0926580525001360" class="text-blue-600 hover:underline">Paper</a>
+            <a href="https://github.com/LydJason/BIMNet" class="text-blue-600 hover:underline">Github</a>
           </div>
         </div>
       </div>
@@ -338,9 +355,9 @@
           </p>
           <p class="text-m text-gray-600">The 18th European Conference on Computer Vision (<b>ECCV</b>), 2024.</p>
           <div class="space-x-3 text-m mt-1">
-            <a href="#" class="text-blue-600 hover:underline">Project page</a>
-            <a href="#" class="text-blue-600 hover:underline">Paper</a>
-            <a href="#" class="text-blue-600 hover:underline">Github</a>
+            <a href="https://list17.github.io/ImplicitFilter" class="text-blue-600 hover:underline">Project page</a>
+            <a href="https://github.com/list17/ImplicitFiltering" class="text-blue-600 hover:underline">Paper</a>
+            <a href="https://arxiv.org/abs/2407.13342" class="text-blue-600 hover:underline">Github</a>
           </div>
         </div>
       </div>
@@ -356,9 +373,8 @@
           </p>
           <p class="text-m text-gray-600">The 38th Annual AAAI Conference on Artificial Intelligence (<b>AAAI</b>), 2024</p>
           <div class="space-x-3 text-m mt-1">
-            <a href="#" class="text-blue-600 hover:underline">Project page</a>
-            <a href="#" class="text-blue-600 hover:underline">Paper</a>
-            <a href="#" class="text-blue-600 hover:underline">Github</a>
+            <a href="https://arxiv.org/abs/2401.02292" class="text-blue-600 hover:underline">Paper</a>
+            <a href="https://github.com/list17/GridFormer" class="text-blue-600 hover:underline">Github</a>
           </div>
         </div>
       </div>
@@ -483,7 +499,7 @@
     
     let scrollPosition = 0;
     const cardWidth = 288 + 24; // 72 * 4 (w-72) + 24px gap
-    const maxScroll = cardWidth * 1; // Can scroll 1 card width (since we show 3 out of 4)
+    const maxScroll = cardWidth * 2; // Can scroll 2 card width (since we show 3 out of 5)
     
     function updateButtons() {
       leftBtn.style.display = scrollPosition <= 0 ? 'none' : 'flex';
@@ -505,7 +521,7 @@
     rightBtn.addEventListener('click', () => scrollCards('right'));
     
     // Initialize button visibility
-    updateButtons();
+    updateButtonƒs();
   </script>
 
 </body>
