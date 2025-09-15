@@ -15,7 +15,10 @@
     <!-- Header -->
     <header class="relative z-20">
       <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 id="siteTitle" class="text-2xl font-bold text-white">CBIMS研究组</h1>
+        <div class="flex items-center space-x-3">
+          <img src="images/logo-cbm.svg" alt="CBIMS Logo" class="h-8 w-8">
+          <h1 id="siteTitle" class="text-2xl font-bold text-white">CBIMS研究组</h1>
+        </div>
         <nav class="space-x-6 flex items-center">
           <a href="#about" id="nav-about" class="text-white hover:text-blue-300">关于我们</a>
           <a href="#news" id="nav-news" class="text-white hover:text-blue-300">新闻</a>
@@ -521,7 +524,7 @@
     rightBtn.addEventListener('click', () => scrollCards('right'));
     
     // Initialize button visibility
-    updateButtonƒs();
+    updateButtons();
   </script>
 
 </body>
