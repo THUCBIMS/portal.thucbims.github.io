@@ -24,6 +24,7 @@
           <a href="#news" id="nav-news" class="text-white hover:text-blue-300">新闻</a>
           <a href="#awards" id="nav-awards" class="text-white hover:text-blue-300">获奖</a>
           <a href="#publications" id="nav-publications" class="text-white hover:text-blue-300">论文发表</a>
+          <a href="#visitors" id="nav-visitors" class="text-white hover:text-blue-300">访客地图</a>
           
           <!-- Language Dropdown -->
           <div class="relative">
@@ -172,9 +173,24 @@
   <section id="awards" class="max-w-5xl mx-auto px-6 py-12">
     <h2 id="awardsTitle" class="text-2xl font-bold mb-6">获奖&#127942;</h2>
 
+        <!-- Award card 2025 buildingSMART -->
+        <div class="grid md:grid-cols-[150px_1fr] gap-4 p-4 rounded-2xl border mb-3">
+        <img src="images/buildingSmart.png" alt="buildingSMART 2025 Award">
+        <div>
+            <h3 class="font-semibold">
+            Best Student Research Award&#127942; -- buildingSMART openBIM Awards 2025
+            </h3>
+            <p class="text-m text-gray-700">
+            Held in conjunction with <span class="font-medium"><b>buildingSMART International Summit 2025</b></span>, Berlin, Germany.
+            </p>
+            <p class="text-m text-gray-500 mt-1">
+            Yudong Liu, Han Huang, Ge Gao, Ziyi Ke, Shengtao Li, Xiaowei Zhang, Ming Gu
+            </p>
+        </div>
+        </div>
+
         <!-- Award card 2023 -->
         <div class="grid md:grid-cols-[150px_1fr] gap-4 p-4 rounded-2xl border mb-3">
-        <!-- 可替换为你的证书图片 URL -->
         <img src="images/23-2d-1.png" alt="CVPR 2023 Award">
         <div>
             <h3 class="font-semibold">
@@ -191,7 +207,6 @@
 
         <!-- Award card 2023 -->
         <div class="grid md:grid-cols-[150px_1fr] gap-4 p-4 rounded-2xl border mb-3">
-        <!-- 可替换为你的证书图片 URL -->
         <img src="images/23-3d-2.png" alt="CVPR 2023 Award">
         <div>
             <h3 class="font-semibold">
@@ -208,7 +223,6 @@
 
         <!-- Award card 2022 -->
         <div class="grid md:grid-cols-[150px_1fr] gap-4 p-4 rounded-2xl border mb-3">
-        <!-- 可替换为你的证书图片 URL -->
         <img src="images/22-2d-1.png" alt="CVPR 2022 Award" >
         <div>
             <h3 class="font-semibold">
@@ -225,7 +239,6 @@
 
         <!-- Award card 2022 -->
         <div class="grid md:grid-cols-[150px_1fr] gap-4 p-4 rounded-2xl border ">
-        <!-- 可替换为你的证书图片 URL -->
         <img src="images/22-3d-1.png" alt="CVPR 2022 Award" >
         <div>
             <h3 class="font-semibold">
@@ -244,7 +257,7 @@
 
 
   <!-- Publications -->
-  <section id="publications" class="max-w-5xl mx-auto px-6">
+  <section id="publications" class="max-w-5xl mx-auto px-6 py-12">
     <h2 id="publicationsTitle" class="text-2xl font-bold mb-6">论文发表&#128196;</h2>
 
     <!-- Year -->
@@ -404,8 +417,12 @@
 
   </section>
 
-
-
+  <!-- Visitor Map Section -->
+  <section id="visitors" class="max-w-5xl mx-auto px-6 py-12">
+    <h2 id="visitorsTitle" class="text-2xl font-bold mb-6">访客地图&#128506;</h2>
+    <div class="flex justify-center">
+      <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=u2JamK3kKhxxpds_wdsLvh9917-FCmkkIgRbgcvt4wo&cl=ffffff&w=a"></script>    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-gray-100 mt-12 py-6">
@@ -423,12 +440,14 @@
         navNews: "新闻",
         navAwards: "获奖",
         navPublications: "论文发表",
+        navVisitors: "访客地图",
         languageText: "语言",
         aboutTitle: "关于我们🌍",
         aboutText: "我们是清华大学软件学院CBIMS研究组。我们的研究专注于建筑信息模型（BIM）、3D计算机视觉和人工智能（AI）。我们致力于连接建筑、工程和建设（AEC）行业与人工智能之间的桥梁。",
         newsTitle: "新闻✨",
         awardsTitle: "获奖🏆",
-        publicationsTitle: "论文发表📄"
+        publicationsTitle: "论文发表📄",
+        visitorsTitle: "访客地图🗺️"
       },
       en: {
         siteTitle: "CBIMS research group",
@@ -436,12 +455,14 @@
         navNews: "News",
         navAwards: "Awards",
         navPublications: "Publications",
+        navVisitors: "Visitor Map",
         languageText: "Language",
         aboutTitle: "About Us🌍",
         aboutText: "We are the CBIMS research group from School of software, Tsinghua University. Our research focuses on Building Information Model (BIM), 3D computer vision, and Artificial Intelligence (AI). We aim to bridge the gap between Architecture, Engineering & Construction (AEC) industry and AI.",
         newsTitle: "News✨",
         awardsTitle: "Awards🏆",
-        publicationsTitle: "Publications📄"
+        publicationsTitle: "Publications📄",
+        visitorsTitle: "Visitor Map🗺️"
       }
     };
 
@@ -456,12 +477,14 @@
       document.getElementById('nav-news').textContent = t.navNews;
       document.getElementById('nav-awards').textContent = t.navAwards;
       document.getElementById('nav-publications').textContent = t.navPublications;
+      document.getElementById('nav-visitors').textContent = t.navVisitors;
       document.getElementById('languageText').textContent = t.languageText;
       document.getElementById('aboutTitle').textContent = t.aboutTitle;
       document.getElementById('aboutText').textContent = t.aboutText;
       document.getElementById('newsTitle').textContent = t.newsTitle;
       document.getElementById('awardsTitle').textContent = t.awardsTitle;
       document.getElementById('publicationsTitle').textContent = t.publicationsTitle;
+      document.getElementById('visitorsTitle').textContent = t.visitorsTitle;
     }
 
     // Language dropdown functionality
@@ -526,6 +549,7 @@
     // Initialize button visibility
     updateButtons();
   </script>
+
 
 </body>
 </html>
