@@ -80,6 +80,23 @@
         <div class="overflow-hidden mx-12">
           <div id="cardsContainer" class="flex space-x-6 transition-transform duration-300">
             
+            <!-- Card 0 - NEW -->
+            <div class="flex-shrink-0 w-72 bg-white rounded-2xl overflow-hidden">
+              <div class="h-48">
+                <img src="images/news6.jpg" alt="News 6" class="w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <div class="flex space-x-2 mb-3">
+                  <span class="px-3 py-1 text-gray-700 text-sm rounded-full" style="background-color: #eef9ff;">09.2025</span>
+                  <span class="px-3 py-1 text-gray-700 text-sm rounded-full" style="background-color: #eef9ff;">国际奖项</span>
+                </div>
+                <div class="space-y-1">
+                  <p class="text-sm text-gray-700">奖项：Best Student Research Award</p>
+                  <p class="text-sm text-gray-700">比赛：buildingSMART openBIM Awards 2025, Berlin, Germany</p>
+                </div>
+              </div>
+            </div>
+
             <!-- Card 1 -->
             <div class="flex-shrink-0 w-72 bg-white rounded-2xl overflow-hidden">
               <div class="h-48">
@@ -529,7 +546,7 @@
     
     let scrollPosition = 0;
     const cardWidth = 288 + 24; // 72 * 4 (w-72) + 24px gap
-    const maxScroll = cardWidth * 2; // Can scroll 2 card width (since we show 3 out of 5)
+    const maxScroll = cardWidth * 3; // Can scroll 3 card width (since we show 3 out of 6)
     
     function updateButtons() {
       leftBtn.style.display = scrollPosition <= 0 ? 'none' : 'flex';
